@@ -4,10 +4,13 @@ import EditScreenInfo from "@/components/EditScreenInfo"
 import { Text, View } from "@/components/Themed"
 import { SafeAreaView } from "react-native-safe-area-context"
 import Lottie from "lottie-react-native"
-import { useRef } from "react"
+import { useContext, useRef } from "react"
+import { createRandomUser } from "@/utils/generate-dommy-data"
+import { ThreadsContext } from "@/context/thread-context"
 
 export default function TabOneScreen() {
 	const animationRef = useRef<Lottie>(null)
+	const threads = useContext(ThreadsContext)
 
 	return (
 		<SafeAreaView>
@@ -32,6 +35,10 @@ export default function TabOneScreen() {
 					autoPlay
 					style={{ width: 90, height: 90, alignSelf: "center" }}
 				/>
+
+				{threads.map((thread) => (
+					<Text key={thread.id}>{thread.author.name}</Text>
+				))}
 			</ScrollView>
 		</SafeAreaView>
 	)
