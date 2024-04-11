@@ -1,11 +1,7 @@
-import { Platform, RefreshControl, ScrollView, StyleSheet } from "react-native"
-
-import EditScreenInfo from "@/components/EditScreenInfo"
-import { Text, View } from "@/components/Themed"
+import { RefreshControl, ScrollView } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import Lottie from "lottie-react-native"
 import { useContext, useRef } from "react"
-import { createRandomUser } from "@/utils/generate-dommy-data"
 import { ThreadsContext } from "@/context/thread-context"
 import { ThreadsItem } from "@/components/ThreadsItem"
 
