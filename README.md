@@ -4,7 +4,7 @@ This is Threads Clone App built by `Diego Tech` by using:
 
 - React Native
 - Expo
-- TypeScrypt
+- TypeScript
 - React Router Dom / Expo Router
 - Lottie React Native
 
